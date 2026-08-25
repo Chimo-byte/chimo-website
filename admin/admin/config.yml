@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Articles & Videos"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Latest Trending Movie", "Breaking News", "Video Hub", "Cinema", "Tech"] }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Video URL (Optional)", name: "video_url", widget: "string", required: false }
+      - { label: "Summary", name: "excerpt", widget: "text" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
