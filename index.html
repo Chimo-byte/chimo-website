@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chimo — News & Video Platform</title>
   <script src="https:identity.netlify.com/v1/netlify-identity-widget.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -40,7 +42,9 @@
   </header>
 
   <main class="max-w-7xl mx-auto px-6 py-8 space-y-12">
-
+    <div id="post-container">
+    <p>loading posts...</p>
+    </div>
     <!-- Hero Headline: Latest Trending Movie of the Week -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#EFECE6] p-8 rounded-3xl shadow-sm">
       <div class="lg:col-span-5 space-y-4">
@@ -194,5 +198,56 @@
     });
   }
 </script>
+<script>
+  async function loadPosts() {
+    const username = "Chimo-byte"; 
+    const repo = "chimo-website";
+    const container = document.getElementById("posts-container");
+
+    try {
+      // 1. Fetch post files list from GitHub API
+      const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/content/posts`);
+      
+      if (!response.ok) {
+        container.innerHTML = "<p>No posts published yet.</p>";
+        return;
+      }
+
+      const files = await response.json();
+      container.innerHTML = ""; // Clear loading text
+
+      // 2. Loop through each post file and parse front-matter
+      for (const file of files) {
+        if (file.name.endsWith(".md")) {
+          const res = await fetch(file.download_url);
+          const text = await res.text();
+
+          // Split YAML front-matter metadata from body content
+          const parts = text.split("---");
+          if (parts.length >= 3) {
+            const metadata = jsyaml.load(parts[1]);
+            const markdownBody = parts.slice(2).join("---");
+            const htmlBody = marked.parse(markdownBody);
+
+            // 3. Render post card onto your page
+            const postElement = document.createElement("article");
+            postElement.className = "post-card";
+            postElement.innerHTML = `
+              ${metadata.thumbnail ? `<img src="${metadata.thumbnail}" alt="${metadata.title}" style="max-width:100%; height:auto;" />` : ''}
+              <h3>${metadata.title}</h3>
+              <p><strong>Category:</strong> ${metadata.category || 'General'}</p>
+              <p><em>Published: ${new Date(metadata.date).toLocaleDateString()}</em></p>
+              <p>${metadata.excerpt || ''}</p>
+              <div>${htmlBody}</div>
+              <hr/>
+            `;
+            container.appendChild(postElement);
+          }
+        }
+      }
+    } catch (err) {
+      console.error(err);
+      container.innerHTML = "<p>Error loading content.</p>";
+    }
 </body>
 </html>
