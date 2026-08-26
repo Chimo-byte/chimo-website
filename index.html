@@ -233,8 +233,11 @@
               postElement.className = "bg-white p-6 rounded-2xl shadow-sm border border-stone-100 space-y-4";
               postElement.innerHTML = `
                 ${metadata.thumbnail ? `<img src="${metadata.thumbnail}" alt="${metadata.title}" class="w-full h-64 object-cover rounded-xl mb-4" />` : ''}
-                <span class="inline-block bg-amber-100 text-stone-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">${metadata.category || 'General'}</span>
-                <h3 class="text-2xl font-serif-heading font-bold text-stone-900">${metadata.title}</h3>
+                <div class="flex items-center space-x-2">
+                  <span class="inline-block bg-amber-100 text-stone-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">${metadata.category || 'General'}</span>
+                  ${metadata.video_url ? `<a href="${metadata.video_url}" target="_blank" class="inline-flex items-center bg-[#8C3A27] text-white text-xs font-semibold px-3 py-1 rounded-full hover:bg-stone-800 transition"><i class="fa-solid fa-play mr-1"></i> Watch Video</a>` : ''}
+                </div>
+                <h3 class="text-2xl font-serif-heading font-bold text-stone-900 mt-2">${metadata.title}</h3>
                 <p class="text-xs text-stone-500">Published: ${new Date(metadata.date).toLocaleDateString()}</p>
                 <p class="text-stone-600 text-sm leading-relaxed">${metadata.excerpt || ''}</p>
                 <div class="prose max-w-none text-stone-800 text-sm pt-2 border-t border-stone-100">${htmlBody}</div>
