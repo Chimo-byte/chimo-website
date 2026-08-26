@@ -10,7 +10,6 @@ CATEGORIES = [
     {"api_name": "technology", "display_name": "Tech & Media"},
     {"api_name": "business", "display_name": "World News"},
     {"api_name": "entertainment", "display_name": "Cinema & Reviews"}
-    {"api_name": "football", "display_name": "Tech & Media"}
 ]
 
 today_date = datetime.datetime.now().strftime("%Y-%m-%d")
