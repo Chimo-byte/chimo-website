@@ -7,9 +7,9 @@ API_KEY = os.environ.get("NEWS_API_KEY")
 
 # Define the categories you want to fetch daily
 CATEGORIES = [
-    {"api_name": "technology", "display_name": "Tech Media"},
-    {"api_name": "business", "display_name": "Wordld News"},
-    {"api_name": "entertainment", "display_name": "Cinema review"}
+    {"api_name": "technology", "display_name": "Tech & Media"},
+    {"api_name": "business", "display_name": "World News"},
+    {"api_name": "entertainment", "display_name": "Cinema & Review"}
 ]
 
 today_date = datetime.datetime.now().strftime("%Y-%m-%d")
