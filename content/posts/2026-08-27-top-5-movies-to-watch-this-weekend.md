@@ -2,7 +2,7 @@
 title: Top 5 Movies to Watch this weekend
 date: 2026-08-27T09:43:00.000+01:00
 category: Latest Trending Movie
-thumbnail: /images/uploads/1003345758.jpg
+thumbnail: https://share.google/vb5I7WrGpPOA4Wrw2
 video_url: https://loadedfiles.net/32accdb9d480444d/Mutiny.2026.540p.X265.AAC.[9jaRocks.Com].mkv
 excerpt: Mutiny (2026)
 ---
