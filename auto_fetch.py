@@ -9,7 +9,7 @@ API_KEY = os.environ.get("NEWS_API_KEY")
 CATEGORIES = [
     {"api_name": "technology", "display_name": "Tech & Media"},
     {"api_name": "business", "display_name": "World News"},
-    {"api_name": "Sport", "display_name": "Soccer"}
+    {"api_name": "sport", "display_name": "Soccer"}
 ]
 
 today_date = datetime.datetime.now().strftime("%Y-%m-%d")
