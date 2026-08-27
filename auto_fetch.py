@@ -22,20 +22,22 @@ for cat in CATEGORIES:
     response = requests.get(url).json()
     articles = response.get("articles", [])
     
-    if not articles:
-        continue
+    # Grab top 3 articles for each category
+    for i, article in enumerate(articles[:3]):
+        title = article.get("title", "").replace('"', '\\"')
+        if not title or title == "[Removed]":
+            continue
+
+        description = article.get("description", "") or ""
+        content = article.get("content", "") or description
+        image_url = article.get("urlToImage", "") or ""
+        date_str = datetime.date.today().isoformat()
         
-    article = articles[0]
-    title = article.get("title", "").replace('"', '\\"')
-    description = article.get("description", "") or ""
-    content = article.get("content", "") or description
-    image_url = article.get("urlToImage", "") or ""
-    date_str = datetime.date.today().isoformat()
-    
-    slug_title = re.sub(r'[^a-zA-Z0-9]+', '-', cat['display_name'].lower()).strip('-')
-    filename = f"content/posts/{date_str}-{slug_title}.md"
-    
-    post_content = f"""---
+        # Create unique filename for each of the 3 articles
+        slug_title = re.sub(r'[^a-zA-Z0-9]+', '-', title.lower())[:30].strip('-')
+        filename = f"content/posts/{date_str}-{cat['display_name'].lower()}-{slug_title}-{i}.md"
+        
+        post_content = f"""---
 title: "{title}"
 date: {date_str}
 category: "{cat['display_name']}"
@@ -45,6 +47,6 @@ excerpt: "{description.replace('"', '\\"')}"
 
 {content}
 """
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(post_content)
-    print(f"Saved: {filename}")
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(post_content)
+        print(f"Saved: {filename}")
