@@ -6,5 +6,10 @@ thumbnail: "https://image.cnbcfm.com/api/v1/image/108329388-1782919464595-gettyi
 excerpt: "The data includes the portfolios of hundreds of family offices, representing a total of $1.4 trillion in assets."
 ---
 
-The New York Stock Exchange on April 14, 2025.
-A version of this article first appeared in CNBC's Inside Wealth newsletter with Robert Frank, a weekly guide to the high-net-worth investor and consum… [+4161 chars]
+The data includes the portfolios of hundreds of family offices, representing a total of $1.4 trillion in assets.
+
+<br/>
+
+<a href="https://www.cnbc.com/2026/08/27/family-offices-making-bullish-bet-on-stocks-according-to-cnbc-tracker.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #1A1A1A; color: #ffffff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px;">
+  Read Full Article on CNBC &rarr;
+</a>
