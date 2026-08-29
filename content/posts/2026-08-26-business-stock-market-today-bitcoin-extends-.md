@@ -1,10 +1,10 @@
 ---
-title: "Stock Market Today: Bitcoin Extends Rally, Crossing Above $80,000 - WSJ"
-date: 2026-08-26
-category: World News
-thumbnail: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
-video_url: "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-25-2026"
-excerpt: "Read the full story below...."
+title: "Broken Systems: How graft sabotages Nigeria’s growth, governance"
+date: 2026-08-29T16:49:00.000+01:00
+category: Breaking News
+thumbnail: https://cdn.vanguardngr.com/wp-content/uploads/2025/06/Tinubu-Atiku-Obi.jpg
+video_url: https://www.vanguardngr.com/2026/08/broken-systems-how-graft-sabotages-nigerias-growth-governance/amp/
+excerpt: Read the full story below....
 ---
 
 Read the full story below.
