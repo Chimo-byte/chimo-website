@@ -1,9 +1,9 @@
 ---
-title: AI could make many jobs disappear forever, Bill Gates warns
-date: 2026-08-27T11:15:00.000+01:00
-category: Tech
-thumbnail: https://cdn.punchng.com/wp-content/uploads/2025/07/12205653/BILL-GATES.jpg
-video_url: https://punchng.com/ai-could-make-many-jobs-disappear-forever-bill-gates-warns/
+title: "Oyo varsity accreditation: Parents seek help from FG"
+date: 2026-08-30T11:38:00.000+01:00
+category: Breaking News
+thumbnail: https://cdn.punchng.com/wp-content/uploads/2026/04/12202616/atiba.jpeg
+video_url: https://punchng.com/oyo-varsity-accreditation-parents-seek-help-from-fg/
 excerpt: Latest breaking story....
 ---
 
