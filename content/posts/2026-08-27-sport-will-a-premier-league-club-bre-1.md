@@ -1,9 +1,11 @@
 ---
-title: "Will a Premier League club break record for transfer sales in one window?"
-date: 2026-08-27
-category: "Sport"
-thumbnail: "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/b41f/live/6abb1df0-a141-11f1-9311-09d4e1fc9016.png"
-excerpt: "Aston Villa, Man City and Newcastle are closing in on Monaco's record for transfer income generated in a single window."
+title: Moana (2026)
+date: 2026-09-11T11:28:00.000+01:00
+category: Latest Trending Movie
+thumbnail: https://9jarocks.net/wp-content/uploads/2026/09/Moana_Poster.jpg
+video_url: https://loadedfiles.net/3e1029d960998c89?pt=RXNZeHN5M2FUVEk5U1VWUWxTdUlTWEpxVkVwUldHdGhOVkpTWTB3dlYzQjFhMUprWkVFOVBRPT0%3D
+excerpt: Moana (2026)
 ---
+Moana (2026)
 
-Manchester City's position has shifted following Wednesday's signing of Ayyoub Bouaddi. They have generated 278.5m euros from sales so far, with the departures of players including Savio, Tijjani Rei… [+1172 chars]
+Live-action adaptation of the 2016 Disney animated film ‘Moana.’
